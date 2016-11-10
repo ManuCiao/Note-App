@@ -5,17 +5,22 @@
   }
 
   var twentyCharacters = function (string) {
-    return (string.slice(0, 20) + " ...");
+    return (string.textReturn().slice(0, 20) + " ...");
+  };
+
+  var url = function (string) {
+    return ("/#/notes/" + string.idReturn());
   };
 
   NoteListView.prototype = {
 
+
     htmlURL: function () {
-      var index = 0;
+      var index = 1;
       var stringArr = this.noteList.stringArray();
       var resultArray = stringArr.map(function(string) {
         index++;
-        return ("<li><div><a href='#notes/" + index + "'>") + twentyCharacters(string) + ("</a></li></div>");
+        return ("<li><div><a href='" + url + "'>") + twentyCharacters(string) + ("</a></li></div>");
       }).join("");
       return resultArray;
     },
@@ -24,7 +29,7 @@
       return ("<ul>" + this.htmlURL() + "</ul>");
     },
 
-    
+
 
   };
 

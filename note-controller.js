@@ -1,22 +1,16 @@
 (function(exports){
 
-  function NoteController(noteList, noteListView, singleNote, singleNoteView){
+  function NoteController(noteList, noteListView, singleNoteView){
     this.noteList = new NoteList();
     this.noteListView = new NoteListView(this.noteList);
-    this.singleNote = new Note("Today is today!! bla bla bla bla");
     this.singleNoteView = new SingleNoteView(this.singleNote);
-    this.count = 0;
   }
 
   NoteController.prototype = {
 
-    idIncrement: function () {
-      this.count++;
+    createNewNote: function (text) {
+      this.noteList.storeNote(new Note(text));
     },
-
-    // htmlSingleNote: function () {
-    //   return this.singleNoteView.displayNote();
-    // },
 
     htmlList: function () {
       this.createNewNote("anything?more of something....:P");
@@ -25,21 +19,32 @@
       return joiner;
     },
 
-    createNewNote: function (text) {
-      var id = this.count;
-      this.idIncrement();
-      this.noteList.storeNote(new Note(text, id));
-    },
-
-
     listNote: function () {
       var test =  document.getElementById("app");
       test.innerHTML = this.htmlList();
     },
 
+    // makeUrlChangeShowNoteForCurrentPage: function() {
+    //   window.addEventListener("hashchange", this.showNoteForCurrentPage());
+    // },
+    //
+    // showNoteForCurrentPage: function() {
+    //   this.showNote(this.getNoteFromUrl(window.location));
+    // },
+    //
+    // getNoteFromUrl: function(location) {
+    //   return location.hash.split("#notes/")[0];
+    // },
+    //
+    // showNote: function(note) {
+    //   document
+    //     .getElementById("app")
+    //     .innerHTML = note;
+    // },
+
     run: function () {
       this.listNote();
-      // this.ht();
+      // this.makeUrlChangeShowNoteForCurrentPage();
     }
 
   };

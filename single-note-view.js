@@ -7,20 +7,9 @@
   SingleNoteView.prototype = {
 
     htmlNote: function () {
-      var noteText = this.singleNote.text;
-      var div = document.createElement("div");
-      console.log(this.singleNote.id)
-      div.setAttribute("id", this.singleNote.id)
-      div.innerHTML = noteText;
-      return div;
+      var noteText = this.singleNote.textReturn();
+      return "<div id='id'>" + noteText + "</div>";
     },
-
-    displayNote: function () {
-      var target = document.getElementById("app");
-      target.appendChild(this.htmlNote());
-    },
-
-
 
   };
 
