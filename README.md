@@ -1,4 +1,4 @@
-# Writing a frontend, single page app using only pure JavaScript (further JS)
+# NoteList Single Page App
 
 ## Learning objectives
 
@@ -10,3 +10,11 @@
 * Ajax.
 * Frontend templating.
 * Frontend routing.
+
+### Tasks
+
+* Writing a single app page using native JavaScript
+* Create MVC model
+* TDD 
+* Pair Programming 
+
