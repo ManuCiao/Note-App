@@ -18,8 +18,9 @@
     NoteListView.prototype.htmlURL = function() {
       var that = this;
         return this.noteList.noteArray.map(function(string) {
-            return ("<li><div>") +
-                that.twentyCharacters(string) + ("</div></li>");
+          var singleNote = new SingleNoteView(string);
+            return ("<li>") +
+                singleNote.htmlNote() + ("</li>");
         }).join("");
     };
 
