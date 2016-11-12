@@ -10,19 +10,14 @@
     <script src="single-note-view.js"></script>
   </head>
   <body>
-    <textarea id='note-text' rows="8" cols="40"></textarea>
-    <button type="button" name="create" onclick="refresh()">Create</button>
-    <div id="app">
-      "Hello!!"
+    <h1 id='title'>Note List</h1>
+    <form action="#" method="post" id="form">
+      <textarea id='note-text' rows="8" cols="40"></textarea>
+      <input type="submit" value ="submit" name="create">
+    </form>
+    <div id='app'>
     </div>
     <p id ='currentSingleNote'></p>
     <script src="index.js"></script>
-    <script>
-      var refresh = function() {
-        var single = document.getElementById('note-text').value;
-        noteController.createNewNote(single);
-        noteController.listNote();
-      }
-    </script>
   </body>
 </html>

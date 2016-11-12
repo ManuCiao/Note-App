@@ -26,9 +26,6 @@
       document.getElementById('currentSingleNote').innerHTML = note;
     },
 
-    run: function () {
-      this.listNote();
-    }
 
   };
 
