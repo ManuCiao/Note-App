@@ -10,7 +10,9 @@
     };
 
     SingleNoteView.prototype.htmlNote = function () {
-              return "<div>" + this.twentyCharacters(this.singleNote) + "</div>";
+              var note = this.singleNote;
+              return "<a href='" + note.url + note.id + "'>" +
+              this.twentyCharacters(note.note) + "</a>";
     };
 
     exports.SingleNoteView = SingleNoteView;

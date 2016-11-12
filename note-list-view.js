@@ -15,17 +15,21 @@
         return (string.slice(0, 20) + stringDOTS);
     };
 
-    NoteListView.prototype.htmlURL = function() {
+    NoteListView.prototype.listElementHtml = function() {
       var that = this;
-        return this.noteList.noteArray.map(function(string) {
-          var singleNote = new SingleNoteView(string);
+        return this.noteList.noteArray.map(function(element) {
+          var singleNote = new SingleNoteView(element);
             return ("<li>") +
                 singleNote.htmlNote() + ("</li>");
         }).join("");
     };
 
-    NoteListView.prototype.htmlJoiner = function() {
-        return ("<ul>" + this.htmlURL() + "</ul>");
+    NoteListView.prototype.listHtml = function() {
+        return ("<ul>" + this.listElementHtml() + "</ul>");
+    };
+
+    NoteListView.prototype.htmlURL = function () {
+        return ("<a href ")
     };
 
     exports.NoteListView = NoteListView;

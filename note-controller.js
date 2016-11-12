@@ -7,20 +7,20 @@
 
   NoteController.prototype = {
 
-    createNewNote: function (text) {
-      this.noteList.storeNote(text);
+    createNewNote: function (note, url) {
+      this.noteList.storeNote(note, url);
     },
 
-    htmlList: function () {
-      this.createNewNote("anything?more of something....:P");
-      this.createNewNote("anything?more of nothing....:P");
-      var joiner = this.noteListView.htmlJoiner();
+    toHtml: function () {
+      this.createNewNote("anything?more of something....:P", "http://localhost:8080#notes/");
+      this.createNewNote("anything?more of nothing....:P", "http://localhost:8080#notes/");
+      var joiner = this.noteListView.listHtml();
       return joiner;
     },
 
     listNote: function () {
       var test =  document.getElementById("app");
-      test.innerHTML = this.htmlList();
+      test.innerHTML = this.toHtml();
     },
 
     run: function () {

@@ -1,14 +1,16 @@
 (function(exports){
 
   function NoteList(){
+    this.index = 0;
     this.noteArray = [];
   }
 
   NoteList.prototype = {
 
-    storeNote: function(note) {
-      this.noteArray.push(note);
-      return note;
+    storeNote: function(note, url) {
+      var result = {url: url, note: note, id: ++this.index};
+      this.noteArray.push(result);
+      return result;
     }
 };
 
