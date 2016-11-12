@@ -1,18 +1,17 @@
-(function(exports){
+(function(exports) {
+    console.log('node-list');
 
-  function SingleNoteView(singleNote){
-    this.singleNote = singleNote;
-  }
+    function SingleNoteView(singleNote) {
+        this.singleNote = singleNote;
+    }
 
-  SingleNoteView.prototype = {
+    SingleNoteView.prototype = {
+        htmlNote: function() {
+            var noteText = this.singleNote.textReturn();
+            return "<div id='id'>" + noteText + "</div>";
+        },
+    };
 
-    htmlNote: function () {
-      var noteText = this.singleNote.textReturn();
-      return "<div id='id'>" + noteText + "</div>";
-    },
-
-  };
-
-  exports.SingleNoteView = SingleNoteView;
+    exports.SingleNoteView = SingleNoteView;
 
 })(this);

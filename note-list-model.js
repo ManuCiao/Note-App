@@ -1,26 +1,15 @@
 (function(exports){
 
-  function NoteList(note){
+  function NoteList(){
     this.noteArray = [];
-    this.note = note;
   }
 
   NoteList.prototype = {
 
-    storeNote: function(text) {
-      var array = new Note(text);
-      this.noteArray.push(array);
-      console.log(array);
-      return array;
-    },
-
-   stringArray: function () {
-      var stringArr = this.noteArray.map(function(noteObj){
-        return noteObj.text;
-      });
-      return stringArr;
+    storeNote: function(note) {
+      this.noteArray.push(note);
+      return note;
     }
-
 };
 
   exports.NoteList = NoteList;

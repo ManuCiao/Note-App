@@ -4,32 +4,28 @@
     this.noteList = noteList;
   }
 
-  var twentyCharacters = function (string) {
-    return (string.textReturn().slice(0, 20) + " ...");
-  };
-
-  var url = function (string) {
-    return ("/#/notes/" + string.idReturn());
-  };
+  //
+  // var url = function (string) {
+  //   return ("/#/notes/" + string.idReturn());
+  // };
 
   NoteListView.prototype = {
 
+    twentyCharacters: function (string) {
+      var stringDOTS = string.length > 20  ? "..." : "";
+      return (this.noteList.textReturn().slice(0, 20) + stringDOTS);
+    },
 
     htmlURL: function () {
-      var index = 1;
-      var stringArr = this.noteList.stringArray();
-      var resultArray = stringArr.map(function(string) {
-        index++;
-        return ("<li><div><a href='" + url + "'>") + twentyCharacters(string) + ("</a></li></div>");
+      return this.noteList.noteArray.map(function(string) {
+        return ("<li><div>") +
+          string + ("</div></li>");
       }).join("");
-      return resultArray;
     },
 
     htmlJoiner: function () {
       return ("<ul>" + this.htmlURL() + "</ul>");
     },
-
-
 
   };
 
