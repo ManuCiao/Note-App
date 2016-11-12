@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Note - Single Page App</title>
     <script src="note-controller.js"></script>
@@ -8,16 +9,20 @@
     <script src="note-model.js"></script>
     <script src="note-list-view.js"></script>
     <script src="single-note-view.js"></script>
-  </head>
-  <body>
-    <h1 id='title'>Note List</h1>
+</head>
+
+<body>
+    <h1 id='title'>Notes</h1>
     <form action="#" method="post" id="form">
-      <textarea id='note-text' rows="8" cols="40"></textarea>
-      <input type="submit" value ="submit" name="create">
+        <textarea id='note-text' rows="8" cols="40"></textarea>
+        <input type="submit" value="submit" name="create">
     </form>
+    <h3 id='note-title'>List Notes</h3>
     <div id='app'>
     </div>
-    <p id ='currentSingleNote'></p>
+    <h5>Your Note goes here:</h5>
+    <p id='currentSingleNote'></p>
     <script src="index.js"></script>
-  </body>
+</body>
+
 </html>

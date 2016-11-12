@@ -1,11 +1,9 @@
-(function(exports){
+(function(exports) {
 
-  var index = 0;
+    function Note(text) {
+        this.text = text;
+    }
 
-  function Note(text){
-    this.text = text;
-  }
-
-  exports.Note = Note;
+    exports.Note = Note;
 
 })(this);

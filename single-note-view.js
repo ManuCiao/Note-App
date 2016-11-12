@@ -11,8 +11,8 @@
 
     SingleNoteView.prototype.htmlNote = function () {
               var note = this.singleNote;
-              return "<a onclick='noteController.revealSingleNote("+ note.id +")' id='notes-"+
-              note.id +"' href='#notes-" + note.id + "'>" +
+              return "<a onclick='noteController.revealSingleNote("+ note.id +")' id='notes/"+
+              note.id +"' href='#notes/" + note.id + "'>" +
               this.twentyCharacters(note.note) + "</a>";
     };
 
