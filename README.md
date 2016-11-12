@@ -15,6 +15,5 @@
 
 * Writing a single app page using native JavaScript
 * Create MVC model
-* TDD 
-* Pair Programming 
-
+* TDD
+* Pair Programming
