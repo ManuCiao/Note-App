@@ -7,8 +7,8 @@
 
   NoteList.prototype = {
 
-    storeNote: function(note, url) {
-      var result = {url: url, note: note, id: ++this.index};
+    storeNote: function(note) {
+      var result = {note: note, id: this.index++};
       this.noteArray.push(result);
       return result;
     }
