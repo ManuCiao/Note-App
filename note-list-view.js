@@ -10,7 +10,6 @@
     };
 
     NoteListView.prototype.listElementHtml = function() {
-        var that = this;
         return this.noteList.noteArray.map(function(element) {
             var singleNote = new SingleNoteView(element);
             return ("<li>") +
@@ -19,7 +18,7 @@
     };
 
     NoteListView.prototype.listHtml = function() {
-        return ("<ul>" + this.listElementHtml() + "</ul>");
+        return ("<ul id='myUL'>" + this.listElementHtml() + "</ul>");
     };
 
     exports.NoteListView = NoteListView;

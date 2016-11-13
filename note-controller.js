@@ -17,15 +17,15 @@
         },
 
         listNote: function() {
-            var test = document.getElementById("app");
-            test.innerHTML = this.toHtml();
+            var listNote = document.getElementById("app");
+            listNote.innerHTML = this.toHtml();
         },
 
         revealSingleNote: function(id) {
             var note = this.noteList.noteArray[id].note;
-            document.getElementById('currentSingleNote').innerHTML = note;
+            var textNote =  document.getElementById('currentSingleNote')
+            textNote.innerHTML = note;
         },
-
 
     };
 
