@@ -35,3 +35,8 @@
 - To run the server ```npm start```.
 
 - Go to ``` http://localhost:8080 ``` in your web browser.
+
+### Here is a preview of the NoteList
+
+![Alt text](css/Screenshot.png)
+
