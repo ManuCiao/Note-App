@@ -9,7 +9,7 @@ function noteListStoresNote() {
 }
 
 
-function ViewReturnHTMLstring() {
+function viewReturnHTMLstring() {
   var noteList = new NoteList();
   var view = new NoteListView(noteList);
   noteList.storeNote("harry potter");
@@ -31,7 +31,36 @@ function singleNoteViewReturns20CharactersHTML() {
   }
 }
 
+function returnIndexIncrement() {
+  var noteList = new NoteList();
+  var view = new NoteListView(noteList);
+  noteList.storeNote("harry potter is still alive!!!!");
+  noteList.storeNote("harry potter is NOT among us anymore!!!!");
+  if ((noteList.index) === 2) {
+    console.log("returnIndexIncrement");
+  } else {
+    console.log("false");
+  }
+}
+
+function returnListNote() {
+  var noteList = new NoteList();
+  var view = new NoteListView(noteList);
+  var controller = new NoteController(noteList, view);
+  controller.createNewNote("harry potter is still alive!!!!");
+  controller.createNewNote("harry potter is NOT among us anymore!!!!");
+  if ((controller.toHtml()) == "<ul id='myUL'><li><a onclick='noteController.revealSingleNote(0)' id='notes/0' href='#notes/0'>harry potter is stil...</a></li><li><a onclick='noteController.revealSingleNote(1)' id='notes/1' href='#notes/1'>harry potter is NOT ...</a></li></ul>") {
+    console.log("returnListNote");
+  } else {
+    console.log("false");
+  }
+}
+
+
+
 
 noteListStoresNote();
-ViewReturnHTMLstring();
+viewReturnHTMLstring();
 singleNoteViewReturns20CharactersHTML();
+returnIndexIncrement();
+returnListNote();
