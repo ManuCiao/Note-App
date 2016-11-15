@@ -1,6 +1,17 @@
+html{
+  font-family: monospace,serif, sans-serif;
+  background: url("img/image1.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: cover;
+}
+
 body {
   margin: 0;
   min-width: 250px;
+  overflow: scroll;
 }
 
 /* Include the padding and border in an element's total width and height */
@@ -19,7 +30,7 @@ ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  background: #eee;
+  background: rgba(238, 238, 238, 0.5);
   font-size: 18px;
   transition: 0.2s;
 
@@ -32,20 +43,28 @@ ul li {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
-  background: #f9f9f9;
+  background: rgba(249, 249, 249, 0.5);
+
 }
 
 /* Darker background-color on hover */
 ul li:hover {
-  background: #ddd;
+  background: rgba(221, 221, 221, 0.5);
+
 }
 
 /* Style the header */
-.header, h3 {
-  background-color: #f44336;
+.header, #currentSingleNote  {
+  text-shadow: 3px 3px 5px #fefefe;
+  font-size: 25px;
   padding: 30px 40px;
-  color: white;
+  color: #000000;
   text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#currentSingleNote {
+  margin-bottom: 20px;
 }
 
 /* Clear floats after the header */
@@ -57,19 +76,24 @@ ul li:hover {
 
 /* Style the input */
 input {
+  font-family: monospace,serif, sans-serif;
   border: none;
   width: 75%;
   padding: 10px;
   float: left;
   font-size: 16px;
+  width: 75%;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px;
+  background: rgba(255, 255, 255,0.1);
 }
 
 /* Style the "Create Note" button */
 #myBtn {
   padding: 10px;
   width: 25%;
-  background: #d9d9d9;
-  color: #555;
+  background: rgba(217, 217, 217,0.1);
+  color: #000;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -78,5 +102,23 @@ input {
 }
 
 #myBtn:hover {
-  background-color: #bbb;
+  background-color: rgb(153, 0, 0);
+}
+
+.footer {
+  font-size: 15px;
+  position: fixed;
+  padding: 1.5rem;
+  background: rgba(0,0,0,0.1);
+  text-align: center;
+  color: #000;
+  height: 5px;
+  padding: 10px 0 25px 0;
+  left: 0 ;
+  right: 0;
+  bottom: 0;
+}
+
+.footer a:hover{
+  cursor: pointer;
 }

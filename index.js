@@ -6,12 +6,9 @@ window.onload = function() {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         var inputValue = document.getElementById('note-text').value;
-        if (inputValue === '') {
-            alert("You must write something!");
-        } else {
-            noteController.createNewNote(inputValue);
-            noteController.listNote();
-        }
+        noteController.createNewNote(inputValue);
+        noteController.listNote();
+
         document.getElementById('note-text').value = "";
 
     });
