@@ -43,14 +43,17 @@ ul li {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
-  background: rgba(249, 249, 249, 0.5);
-
+  background: rgba(249, 249, 249, 0.4);
 }
 
 /* Darker background-color on hover */
-ul li:hover {
-  background: rgba(221, 221, 221, 0.5);
+ul li:hover:nth-child(odd) {
+  background: rgba(153, 0, 0,0.2);
+}
 
+/* Darker background-color on hover */
+ul li:hover:nth-child(even) {
+  background: rgba(232, 193, 30, 0.3);
 }
 
 /* Style the header */
@@ -60,11 +63,14 @@ ul li:hover {
   padding: 30px 40px;
   color: #000000;
   text-align: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 #currentSingleNote {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  /* border: 10px; */
+  /* margin: 0 auto; */
+  padding: 20px;
 }
 
 /* Clear floats after the header */
@@ -85,14 +91,14 @@ input {
   width: 75%;
   font-weight: bold;
   box-shadow: 5px 5px 5px;
-  background: rgba(255, 255, 255,0.1);
+  background: rgba(255, 255, 255,0.7);
 }
 
 /* Style the "Create Note" button */
 #myBtn {
   padding: 10px;
   width: 25%;
-  background: rgba(217, 217, 217,0.1);
+  background: rgba(158,158,158,0.8);
   color: #000;
   float: left;
   text-align: center;
@@ -102,14 +108,15 @@ input {
 }
 
 #myBtn:hover {
-  background-color: rgb(153, 0, 0);
+  background-color: rgba(153, 0, 0,0.5);
 }
 
 .footer {
   font-size: 15px;
+  text-shadow: 3px 3px 5px #fefefe;
   position: fixed;
   padding: 1.5rem;
-  background: rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.3);
   text-align: center;
   color: #000;
   height: 5px;
@@ -121,4 +128,3 @@ input {
 
 .footer a:hover{
   cursor: pointer;
-}
