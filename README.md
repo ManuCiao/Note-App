@@ -38,4 +38,4 @@
 
 ### Here is a preview of the NoteList
 
-![Alt text](css/Screenshot App.png)
+![Alt text](/css/Screenshot%20App.png)
